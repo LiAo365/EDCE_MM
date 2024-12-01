@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+CUDA_VISIBLE_DEVICES=1 python main.py \
+    --seed 0 \
+    --alpha_edl 1.3 \
+    --alpha_uct_guide 0.4 \
+    --amplitude 0.7 \
+    --alpha2 0.4 \
+    --interval 50 \
+    --max_seqlen 320 \
+    --lr 0.00005 \
+    --k 7 \
+    --dataset_name Thumos14reduced \
+    --path_dataset Here is your local dataset path/ \
+    --num_class 20 \
+    --use_model DELU \
+    --max_iter 7500 \
+    --dataset SampleDataset \
+    --weight_decay 0.001 \
+    --project DDG_Thumos \
+    --action_threshold 0.5 \
+    --background_threshold 0.5 \
+    --top_k_rat 10 \
+    --similarity_threshold 0.8 \
+    --AWM DDG_Net \
+    --model_name Thumos14-DDG_Net \
+    --alpha6 1 \
+    --temperature 0.5 \
+    --weight 2 \
+    --alpha5 3.2 \
+    --use_causal_intervention 1 \
+    --abs_atn_threshold 0.75 \
+    --use_consistence_loss 1 \
+    --consistence_threshold 0.8 \
+    --consistence_proposal_threshold 0.7 \
+    --feat_level_loss_weight 0.6 \
+    --attn_level_loss_weight 0.6
